@@ -8,11 +8,9 @@ const fetchData = async () => {
 
          return `
             <article class="product">
+               <h5 class="name">${name}</h5>
                <img src=${image} alt=${name} />
-               <div class="info">
-                  <h5>${name}</h5>
-                  <h5 class="price">${house}</h5>
-               </div>
+               <h5 class="house">${house}</h5>
             </article>
             `
       })

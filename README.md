@@ -20,6 +20,9 @@ SETUP & DEPLOY SERVERLESS FUNCTIONS VIA NETLIFY - aprentz
 6. Preface functions with exports.handle eg
    `exports.handler = async (event, context, callback) => {
       return {
+         headers: {
+         'Access-Control-Allow-Origin':'*'
+         },
          statusCode: 200,
          body: 'this must be a string'
       }

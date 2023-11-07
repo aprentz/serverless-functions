@@ -3,24 +3,31 @@
 }
 
 .product {
-  margin-bottom: 2rem;
-}
-.product img {
-  /* width: 100%; */
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  height: 450px;
-  border-radius: var(--radius);
-  object-fit:cover;
+  text-align: center;
 }
 
-.info {
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
+.name {
+   margin: 0;
+   padding-bottom: 1rem;;
 }
-.price {
-  color: var(--clr-primary-5);
+.product img {
+   border: 4px solid;
+   display: block;
+   border-color:  var(--clr-grey-2);
+   margin: auto;
+   width: 150px;
+   height: 600px;
+   border-radius: var(--radius);
+   object-fit:fill;
+}
+
+.house {
+   margin: 0;
+   padding-top: 1rem;
+   color: var(--clr-primary-5);
 }
 @media screen and (min-width: 776px) {
   .result {
