@@ -1,3 +1,5 @@
+SETUP & DEPLOY SERVERLESS FUNCTIONS VIA NETLIFY - aprentz
+
 1. Install Netlify CLI:
    `npm install netlify-cli -g`
 
@@ -7,3 +9,18 @@
    `[build]
    functions = './functions'
 `
+4. Setup redirects in netlify.toml
+   `[[redirects]]
+   from = '/api/*' 
+   to = '/.netlify/functions/:splat'`
+   status=200
+
+5. Access functions via domain/.netlify/functions/function-name
+
+6. Preface functions with exports.handle eg
+   `exports.handler = async (event, context, callback) => {
+      return {
+         statusCode: 200,
+         body: 'this must be a string'
+      }
+}`
