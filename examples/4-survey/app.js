@@ -54,6 +54,8 @@ const modifyData = async (id, votes) => {
    title.textContent = 'Loading...'
    try {
       const { data } = await axios.put(`/api/4-survey`, { id, votes })
+      const newVotes = data.fields.votes
+      return newVotes
    } catch (error) {
       console.log(error.response.data)
       return null

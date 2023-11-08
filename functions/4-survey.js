@@ -28,13 +28,25 @@ exports.handler = async (event, context, callback) => {
       }
    } if (method === 'PUT') {
       try {
-         const data = await axios.put(id, {})
+         const { id, votes } = JSON.parse(event.body)
+         if (!id || !votes) {
+            return {
+               statusCode: 400,
+               body: 'Server error'
+            }
+         }
+         const fields = { votes: Number(votes) + 1 }
+         const item = await airtable.update(id, {fields})
          return {
             statusCode: 200,
-            
+            body: JSON.stringify(item)
          }
       } catch (error) {
-
+         console.log(error)
+         return {
+            statusCode: 400,
+            body: 'Please provide id and vote values'
+         }
       }
    }
 
