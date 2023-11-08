@@ -5,12 +5,11 @@ const fetchData = async () => {
 
    try {
       const id = window.location.search
-      const { data: { fields } } = await axios.get(`/api/3-product/${id}`)
-      const { descrip, name, price } = fields
-      const url = fields.image[0].url
+      const { data: { fields } } = await axios.get(`/api/3-z-complete/${id}`)
+      const { descrip, name, price, image } = fields
       result.innerHTML = `
          <img class="product-img"
-            src=${url}
+            src=${image[0].url}
             alt=${name}
          />
          <div class="product-info">
@@ -27,6 +26,3 @@ const fetchData = async () => {
 }
 
 fetchData()
-
-//
-// `
