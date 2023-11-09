@@ -6,14 +6,13 @@ alert.style.display = 'none'
 
 form.addEventListener('submit', async (e) => {
    e.preventDefault()
-   form.classList.add('loading')
+   // form.classList.add('loading')
    alert.style.display = 'none'
    const email = emailInput.value
    try {
       await axios.post('/api/6-newsletter', { email })
-      form.innerHTML = 'h<4>'
    } catch (error) {
-
+      console.log(error)
    }
 })
 
