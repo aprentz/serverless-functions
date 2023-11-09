@@ -1,3 +1,4 @@
+
 const form = document.querySelector('.form')
 const emailInput = document.querySelector('.email-input')
 const alert = document.querySelector('.alert')
@@ -10,8 +11,10 @@ form.addEventListener('submit', async (e) => {
    const email = emailInput.value
    try {
       await axios.post('/api/6-newsletter', { email })
-      form.innerHTML = '>h4>'
+      form.innerHTML = 'h<4>'
    } catch (error) {
 
    }
 })
+
+
