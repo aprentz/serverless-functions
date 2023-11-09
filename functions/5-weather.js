@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
    const method = event.httpMethod
    if (method !== 'POST') {
       return {
-         statusCode: 400,
+         statusCode: 405,
          body: 'Only POST Requests Allowed'
       }
    }
