@@ -10,6 +10,12 @@ exports.handler = async (event, context) => {
       }
    }
    const { email } = JSON.parse(event.body)
+   if (!email) {
+      return {
+         statusCode: 400,
+         body: "Please provide email value"
+      }
+   }
    try {
       mailchimp.setConfig({
          apiKey: process.env.MAILCHIMP_API_KEY,
@@ -21,14 +27,14 @@ exports.handler = async (event, context) => {
          status: "pending",
       });
       return {
-         statusCode: 200,
+         statusCode: 201,
          body: JSON.stringify(response)
       }
    }
    catch (error) {
       return {
-         statusCode: 500,
-         body: JSON.stringify(error.response.error)
-      }
+         statusCode: 400,
+         body: JSON.stringify(error)
+      };
    }
 }

@@ -15,9 +15,17 @@ form.addEventListener('submit', async (e) => {
       <h4 class="success">Success! Please check your email</h4>
       `
    } catch (error) {
-      console.log(error.response.data)
       alert.style.display = 'block'
-      alert.textContent = 'Something went wrong. Please try again'
+      if (error?.response?.data?.response?.text) {
+         const responseObject = JSON.parse(error.response.data.response.text)
+         const errorMsg = responseObject.detail.includes('is already a list member') ?
+            responseObject.detail.replace('Use PUT to insert or update list members.', '') :
+            responseObject.detail
+         alert.textContent = errorMsg
+      }
+      else {
+         alert.textContent = error.response.data
+      }
    }
    form.classList.remove('loading')
 })

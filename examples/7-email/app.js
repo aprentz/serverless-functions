@@ -7,3 +7,39 @@ const btn = document.querySelector('.submit-btn')
 const alert = document.querySelector('.alert')
 const title = document.querySelector('.title')
 alert.style.display = 'none'
+
+// const myForm = document.getElementById('email-form')
+// const formData = new FormData(myForm);
+// console.log(formData.get('name'))
+
+form.addEventListener('submit', async (e) => {
+   e.preventDefault()
+   alert.style.display = 'none'
+   btn.disabled = true
+   btn.innerHTML = '<span class="sending"></span>'
+
+   const name = nameInput.value
+   const email = emailInput.value
+   const subject = subjectInput.value
+   const message = messageInput.value
+
+   try {
+      await axios.post('/api/7-email', { name, email, subject, message })
+      nameInput.value = ''
+      emailInput.value = ''
+      subjectInput.value = ''
+      messageInput.value = ''
+      title.textContent = 'Message Sent!'
+      setTimeout(() => {
+         title.textContent = 'Send a Message'
+      }, 3000)
+
+   } catch (error) {
+      console.log(error)
+      alert.style.display = 'block'
+      alert.textContent = error.response.data
+   }
+
+   btn.innerHTML = `Send`
+   btn.disabled = false
+})
