@@ -1,3 +1,6 @@
+# #0969DA Site is deployed at https://serverless-functions1.netlify.app/        
+
+
 SETUP & DEPLOY SERVERLESS FUNCTIONS VIA NETLIFY - aprentz
 
 1. Install Netlify CLI:
