@@ -2,7 +2,7 @@
 ## Site is deployed at https://serverless-functions1.netlify.app/        
 
 
-SETUP & DEPLOY SERVERLESS FUNCTIONS VIA NETLIFY - aprentz
+#Instructions on Netlify CLI installion & configuration to deploy serverless sites to Netlify - aprentz
 
 1. Install Netlify CLI:
    `npm install netlify-cli -g`
