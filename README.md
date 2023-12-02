@@ -1,6 +1,5 @@
 
-https://placehold.it/150/ffffff/ff0000?text=hello
-**#0969DA** Site is deployed at https://serverless-functions1.netlify.app/        
+## Site is deployed at https://serverless-functions1.netlify.app/        
 
 
 SETUP & DEPLOY SERVERLESS FUNCTIONS VIA NETLIFY - aprentz
