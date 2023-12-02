@@ -53,7 +53,7 @@ async function handleSubmit(e) {
       elements,
       confirmParams: {
          // Make sure to change this to your payment completion page
-         return_url: "http://localhost:8888/examples/8-stripe/index.html",
+         return_url: "https://serverless-functions1.netlify.app/examples/8-stripe",
          receipt_email: 'alex.rentz@outlook.com',
       },
    });
