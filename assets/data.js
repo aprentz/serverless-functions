@@ -161,32 +161,6 @@ const items =
           "alive": false,
           "image": "https://ik.imagekit.io/hpapi/cedric.png"
       },
-      {
-          "id": "8f9aa40b-5d7c-441e-ad32-4564ecda3b70",
-          "name": "Cho Chang",
-          "alternate_names": [],
-          "species": "human",
-          "gender": "female",
-          "house": "Ravenclaw",
-          "dateOfBirth": "07-04-1979",
-          "yearOfBirth": 1979,
-          "wizard": true,
-          "ancestry": "",
-          "eyeColour": "brown",
-          "hairColour": "black",
-          "wand": {
-              "wood": "",
-              "core": "",
-              "length": null
-          },
-          "patronus": "swan",
-          "hogwartsStudent": true,
-          "hogwartsStaff": false,
-          "actor": "Katie Leung",
-          "alternate_actors": [],
-          "alive": true,
-          "image": "https://ik.imagekit.io/hpapi/cho.jpg"
-      },
 ]
 
 module.exports = items
