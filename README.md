@@ -1,5 +1,5 @@
 
-## Click [this link](https://serverless-functions1.netlify.app) to access serverless site deployed on Netlify
+## Site is deployed at https://serverless-functions1.netlify.app/        
 
 
 ### Instructions on Netlify CLI installion & configuration to deploy serverless sites to Netlify - aprentz
